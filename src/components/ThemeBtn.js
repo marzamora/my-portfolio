@@ -4,16 +4,17 @@ import { setTheme, useTheme } from "../utils/theme";
 
 const ThemeBtn = () => {
     
-    const [toggle, setToggle] = useState('dark');
     let theme = localStorage.getItem('theme');
 
+    const [buttonText, setButtonText] = React.useState('Dark mode')
+
     const toggleTheme = () => {
-        if (localStorage.getItem('theme') === 'theme-dark') {
-            setTheme('theme-light')
-            setToggle('light')
+        if (localStorage.getItem('theme') === 'dark-mode') {
+            setTheme('light-mode')
+            setButtonText('Dark mode')
         } else {
-            setTheme('theme-dark')
-            setToggle('dark')
+            setTheme('dark-mode')
+            setButtonText('Light mode')
         }
     }
 
@@ -25,7 +26,9 @@ const ThemeBtn = () => {
     
     return (
         <>
-            <button className={classes} type="button" onClick={toggleTheme}>{toggle} mode</button>
+            <button className={classes} type="button" onClick={toggleTheme}>
+                {buttonText}
+            </button>
         </>
     )
 }

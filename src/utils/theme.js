@@ -5,13 +5,13 @@ const setTheme = (themeName) =>  {
 
 const useTheme = () => {
     if (localStorage.getItem('theme')) {
-        if (localStorage.getItem('theme') === 'theme-dark') {
-        setTheme('theme-dark');
-        } else if (localStorage.getItem('theme') === 'theme-light') {
-        setTheme('theme-light')
+        if (localStorage.getItem('theme') === 'dark-mode') {
+        setTheme('dark-mode');
+        } else if (localStorage.getItem('theme') === 'light-mode') {
+        setTheme('light-mode')
         }
     } else {
-        setTheme('theme-dark')
+        setTheme('dark-mode')
     }
 }
 

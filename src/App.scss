@@ -1,0 +1,13 @@
+@import "./styles/light-dark-theme";
+
+.App {
+    margin: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--bgThemeColor1);
+    color: var(--textThemeColor1);
+    text-align: center;
+    transition: background-color 0.5s ease;
+  }
